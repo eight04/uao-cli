@@ -1,0 +1,36 @@
+{
+  "name": "uao-cli",
+  "version": "0.0.0",
+  "description": "An UAO encoder/decoder CLI tool.",
+  "bin": {
+    "uao": "cli.js"
+  },
+  "engines": {
+    "node": ">=4.4.1"
+  },
+  "author": "eight04 <eight04@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "cli",
+    "converter",
+    "encoding",
+    "big5",
+    "uao",
+    "unicode at on"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eight04/uao-cli.git"
+  },
+  "homepage": "https://github.com/eight04/uao-cli#readme",
+  "scripts": {
+    "test": "eslint *.js",
+    "preversion": "npm test",
+    "postversion": "git push --follow-tags && npm publish"
+  },
+  "dependencies": {
+    "docopt": "^0.6.2",
+    "glob": "^7.0.3",
+    "uao-js": "^0.1.1"
+  }
+}
