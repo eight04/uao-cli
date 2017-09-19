@@ -1,6 +1,6 @@
 {
   "name": "uao-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An UAO encoder/decoder CLI tool.",
   "bin": {
     "uao": "cli.js"
@@ -27,7 +27,7 @@
     "test": "eslint *.js",
     "preversion": "npm test",
     "postversion": "git push --follow-tags && npm publish",
-	"prepack": "crlf --set=LF cli.js"
+    "prepack": "crlf --set=LF cli.js"
   },
   "dependencies": {
     "docopt": "^0.6.2",
