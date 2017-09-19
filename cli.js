@@ -91,6 +91,6 @@ function decode(file, ext) {
 
 function reportError(err) {
 	if (err) {
-		console.log(err);
+		console.error(err);
 	}
 }

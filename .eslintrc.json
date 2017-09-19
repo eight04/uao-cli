@@ -1,11 +1,11 @@
 {
 	"env": {
-		"browser": true,
 		"node": true,
 		"es6": true
 	},
 	"rules": {
-		"semi": [2, "always"]
+		"semi": [2, "always"],
+		"no-console": ["error", {"allow": ["error"]}]
 	},
 	"extends": [
 		"eslint:recommended"
