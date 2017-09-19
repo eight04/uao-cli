@@ -34,6 +34,12 @@ For example:
 Changelog
 ---------
 
+* 0.1.1 (Sep 19, 2017)
+
+	- Fix: deprecate error.
+	- Fix: crlf issue.
+	- Update uao-js.
+
 * 0.1.0 (Apr 28, 2016)
 
     - First release.
