@@ -68,7 +68,7 @@ function encode(file, ext) {
 				file.base = file.name + ext;
 				file = path.format(file);
 			}
-			fs.writeFile(file, data, "binary");
+			fs.writeFile(file, data, "binary", reportError);
 		});
 	});
 }
@@ -84,7 +84,13 @@ function decode(file, ext) {
 				file.base = file.name + ext;
 				file = path.format(file);
 			}
-			fs.writeFile(file, data, "utf-8");
+			fs.writeFile(file, data, "utf-8", reportError);
 		});
 	});
+}
+
+function reportError(err) {
+	if (err) {
+		console.log(err);
+	}
 }
