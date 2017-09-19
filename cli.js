@@ -62,13 +62,14 @@ function encode(file, ext) {
 		if (err) {
 			throw err;
 		}
-		data = uao.encode(data);
-		if (ext) {
-			file = path.parse(file);
-			file.base = file.name + ext;
-			file = path.format(file);
-		}
-		fs.writeFile(file, data, "binary");
+		uao.encode(data).then(data => {
+			if (ext) {
+				file = path.parse(file);
+				file.base = file.name + ext;
+				file = path.format(file);
+			}
+			fs.writeFile(file, data, "binary");
+		});
 	});
 }
 
@@ -77,12 +78,13 @@ function decode(file, ext) {
 		if (err) {
 			throw err;
 		}
-		data = uao.decode(data);
-		if (ext) {
-			file = path.parse(file);
-			file.base = file.name + ext;
-			file = path.format(file);
-		}
-		fs.writeFile(file, data, "utf-8");
+		uao.decode(data).then(data => {
+			if (ext) {
+				file = path.parse(file);
+				file.base = file.name + ext;
+				file = path.format(file);
+			}
+			fs.writeFile(file, data, "utf-8");
+		});
 	});
 }
